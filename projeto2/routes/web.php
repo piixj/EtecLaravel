@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/', [UserController::class, 'index'])->name('user.index');function () {
     return view('welcome');
-});
+};
